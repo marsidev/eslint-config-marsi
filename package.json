@@ -1,13 +1,13 @@
 {
-  "name": "eslint-config-marsi",
+  "name": "@marsi/eslint-config-marsi",
   "version": "1.0.0",
   "description": "ESLint configuration from Luis Marsiglia",
   "main": "index.js",
-  "author": {
-    "name": "Luis Marsiglia",
-    "email": "marsiglia.business@gmail.com"
+  "author": "Luis Marsiglia <marsiglia.business@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marsidev/eslint-config-marsi.git"
   },
-  "repository": "https://github.com/marsidev/eslint-config-marsi",
   "license": "ISC",
   "devDpendencies": {
     "@typescript-eslint/eslint-plugin": "^5.29.0",
@@ -46,5 +46,12 @@
     "eslint",
     "lint",
     "config"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/marsidev/eslint-config-marsi/issues"
+  },
+  "homepage": "https://github.com/marsidev/eslint-config-marsi#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
