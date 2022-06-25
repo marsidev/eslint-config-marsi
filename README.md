@@ -1,6 +1,11 @@
 # My personal ESLint config
 
-[![npm version](https://badge.fury.io/js/eslint-config-marsi.svg)](https://badge.fury.io/js/eslint-config-marsi) ![NPM downloads](https://img.shields.io/npm/dm/eslint-config-marsi) [![GitHub issues](https://img.shields.io/github/issues/marsidev/eslint-config-marsi)](https://github.com/marsidev/eslint-config-marsi/issues) [![Twitter Follow](https://img.shields.io/twitter/follow/marsigliacr?label=Follow%20on%20Twitter)](https://twitter.com/marsigliacr/)
+<p align="center">
+  <a href="https://npmjs.com/package/eslint-config-marsi"><img src="https://img.shields.io/npm/v/eslint-config-marsi.svg" alt="npm package"></a>
+  <a href="https://npmjs.com/package/eslint-config-marsi"><img src="https://img.shields.io/npm/dm/eslint-config-marsi.svg" alt="npm downloads"></a>
+  <a href="https://twitter.com/marsigliacr/"><img src="https://img.shields.io/twitter/follow/marsigliacr?label=Follow%20on%20Twitter" /></a>
+</p>
+<br/>
 
 These are settings for ESLint used for my personal projects.
 

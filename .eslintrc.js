@@ -9,11 +9,11 @@ module.exports = {
     'plugin:import/typescript'
   ],
   plugins: [
-    '@typescript-eslint',
     'import',
     'unused-imports',
     'react',
-    'react-hooks'
+    'react-hooks',
+    '@typescript-eslint'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -22,6 +22,11 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     }
+  },
+  env: {
+    browser: true,
+    node: true,
+    jest: true
   },
   rules: {
     '@typescript-eslint/no-unused-vars': [
@@ -113,9 +118,55 @@ module.exports = {
         ignoreDeclarationSort: false,
         ignoreMemberSort: false,
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-        allowSeparatedGroups: false,
-        ignoreDeclarationSort: false
+        allowSeparatedGroups: false
       }
+    ],
+    'import/order': [
+      'warn',
+      {
+        groups: [
+          'type',
+          'builtin',
+          'object',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index'
+        ],
+        pathGroups: [
+          {
+            pattern: '~/**',
+            group: 'external',
+            position: 'after'
+          }
+        ],
+        'newlines-between': 'never'
+      }
+    ],
+    'sort-imports': [
+      'error',
+      {
+        ignoreCase: true,
+        ignoreDeclarationSort: false,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
+        allowSeparatedGroups: false
+      }
+    ],
+    'react/self-closing-comp': 'warn',
+    'react/jsx-sort-props': [
+      'warn',
+      {
+        callbacksLast: true,
+        shorthandFirst: true,
+        noSortAlphabetically: false,
+        reservedFirst: true
+      }
+    ],
+    'padding-line-between-statements': [
+      'warn',
+      { blankLine: 'always', prev: '*', next: ['return', 'export'] }
     ]
   },
   settings: {
