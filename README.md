@@ -23,7 +23,7 @@ These are settings for ESLint used for my personal projects.
   - Using pnpm
     ```bash
     pnpm add eslint-config-marsi -D
-    pnpm dlx install-peerdeps eslint-config-marsi --pnpm --dev
+    npx install-peerdeps eslint-config-marsi --pnpm --dev
     ```
 
 2. You will see several dependencies were installed. Now, create a `.eslintrc.json` file with the following content:
