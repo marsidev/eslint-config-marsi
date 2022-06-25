@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-marsi",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ESLint configuration from Luis Marsiglia",
   "main": "index.js",
   "author": "Luis Marsiglia <marsiglia.business@gmail.com>",
@@ -29,7 +29,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-unused-imports": "^2.0.0"
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "typescript": "^4.7.4"
   },
   "keywords": [
     "eslint",

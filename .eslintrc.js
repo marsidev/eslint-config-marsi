@@ -2,20 +2,16 @@ module.exports = {
   extends: [
     'xo',
     'eslint:recommended',
-    'plugin:import/errors',
-    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'plugin:import/recommended',
-    'plugin:import/typescript'
+    'plugin:import/errors',
+    'plugin:import/recommended'
   ],
-  plugins: [
-    'import',
-    'unused-imports',
-    'react',
-    'react-hooks',
-    '@typescript-eslint'
-  ],
-  parser: '@typescript-eslint/parser',
+  env: {
+    browser: true,
+    es6: true,
+    node: true
+  },
+  plugins: ['import', 'unused-imports', 'react', 'react-hooks'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -23,45 +19,7 @@ module.exports = {
       jsx: true
     }
   },
-  env: {
-    browser: true,
-    node: true,
-    jest: true
-  },
   rules: {
-    '@typescript-eslint/no-unused-vars': [
-      'warn',
-      {
-        args: 'after-used',
-        ignoreRestSiblings: false,
-        argsIgnorePattern: '^_.*?$'
-      }
-    ],
-    '@typescript-eslint/semi': ['error', 'never'],
-    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-    '@typescript-eslint/consistent-type-assertions': [
-      'error',
-      {
-        assertionStyle: 'as',
-        objectLiteralTypeAssertions: 'never'
-      }
-    ],
-    '@typescript-eslint/member-delimiter-style': [
-      'error',
-      {
-        multiline: {
-          delimiter: 'none',
-          requireLast: true
-        },
-        singleline: {
-          delimiter: 'comma',
-          requireLast: false
-        },
-        multilineDetection: 'brackets'
-      }
-    ],
-    '@typescript-eslint/method-signature-style': ['error', 'property'],
-    '@typescript-eslint/type-annotation-spacing': ['error'],
     'arrow-body-style': 'off',
     camelcase: 'off',
     'capitalized-comments': 'off',
@@ -71,6 +29,7 @@ module.exports = {
     indent: ['error', 2],
     'no-mixed-spaces-and-tabs': 'off',
     'no-console': 'off',
+    'no-debugger': 'warn',
     'no-negated-condition': 'off',
     'no-extend-native': 'off',
     'no-return-assign': 'off',
@@ -87,6 +46,7 @@ module.exports = {
     'spaced-comment': 'warn',
     'jsx-quotes': ['error', 'prefer-single'],
     'react/function-component-definition': 0,
+    'react/jsx-filename-extension': [1, { extensions: ['.jsx'] }],
     'react/jsx-indent': [2, 2],
     'react/jsx-sort-props': [
       'warn',
@@ -117,7 +77,7 @@ module.exports = {
         ignoreCase: true,
         ignoreDeclarationSort: false,
         ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+        memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
         allowSeparatedGroups: false
       }
     ],
@@ -144,26 +104,7 @@ module.exports = {
         'newlines-between': 'never'
       }
     ],
-    'sort-imports': [
-      'error',
-      {
-        ignoreCase: true,
-        ignoreDeclarationSort: false,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
-        allowSeparatedGroups: false
-      }
-    ],
     'react/self-closing-comp': 'warn',
-    'react/jsx-sort-props': [
-      'warn',
-      {
-        callbacksLast: true,
-        shorthandFirst: true,
-        noSortAlphabetically: false,
-        reservedFirst: true
-      }
-    ],
     'padding-line-between-statements': [
       'warn',
       { blankLine: 'always', prev: '*', next: ['return', 'export'] }
@@ -175,5 +116,3 @@ module.exports = {
     }
   }
 }
-
-

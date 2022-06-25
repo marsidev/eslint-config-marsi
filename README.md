@@ -1,4 +1,4 @@
-# My personal ESLint config
+# [marsidev](https://github.com/marsidev)'s ESLint config
 
 <p align="center">
   <a href="https://npmjs.com/package/eslint-config-marsi"><img src="https://img.shields.io/npm/v/eslint-config-marsi.svg" alt="npm package"></a>
@@ -7,40 +7,98 @@
 </p>
 <br/>
 
-These are settings for ESLint used for my personal projects.
+These is a shareable config for ESLint, used on my personal JavaScript/TypeScript/React projects.
+
+## What it does
+
+- Lints JavaScript and TypeScript files
+- Uses [eslint-config-xo](https://github.com/xojs/eslint-config-xo) as a base config
 
 ## Installing
 
 1. Install the config and dependencies:
 
-  - Using [npm](https://www.npmjs.com)
-    ```bash
-    npm i eslint-config-marsi --save-dev
-    npx install-peerdeps eslint-config-marsi --dev
+   - Using [npm](https://www.npmjs.com)
+     ```bash
+     npx install-peerdeps eslint-config-marsi --dev
+     ```
+
+   - Using [yarn](https://yarnpkg.com)
+     ```bash
+     npx install-peerdeps eslint-config-marsi --yarn --dev
+     ```
+
+   - Using [pnpm](https://pnpm.io)
+     ```bash
+     npx install-peerdeps eslint-config-marsi --pnpm --dev
+     ```
+
+2. Create a `.eslintrc.json` file in the root of your project's directory.
+
+3. Fill your `.eslintrc.json` file:
+  
+     - Using JavaScript:
+       ```json
+       {
+         "extends": ["marsi"]
+       }
+       ```
+
+     - Using TypeScript:
+       ```json
+       {
+         "extends": ["marsi/typescript"]
+       }
+       ```
+
+    If you won't use TypeScript, you can remove TypeScript-related packages from your `package.json`:
+
+    ```diff
+    "devDependencies": {
+    - "@typescript-eslint/eslint-plugin": "x.x.x",
+    - "@typescript-eslint/parser": "X.X.X",
+    - "typescript": "X.X.X"
+    },
     ```
 
-  - Using [yarn](https://yarnpkg.com)
-    ```bash
-    yarn add eslint-config-marsi -D
-    npx install-peerdeps eslint-config-marsi --yarn --dev
-    ```
+## Scripts
 
-  - Using [pnpm](https://pnpm.io)
-    ```bash
-    pnpm add eslint-config-marsi -D
-    npx install-peerdeps eslint-config-marsi --pnpm --dev
-    ```
+You can add these two scripts to your package.json to lint and/or fix your code:
+```json
+"scripts": {
+  "lint": "eslint .",
+  "lint:fix": "eslint . --fix",
+},
+```
 
-2. You will see several dependencies were installed. Now, create a `.eslintrc.json` file with the following content:
+## Settings
 
-```js
+If you'd like to overwrite eslint settings, you can add the rules in your `.eslintrc` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"`.
+
+```json
 {
-  "extends": [
-    "marsi"
-  ]
+  "extends": ["marsi"],
+  "rules": {
+    "indent": ["error", 2],
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
+  }
 }
 ```
 
----
 
-Inspired by [eslint-config-leozera](https://github.com/leonardofaria/eslint-config-leozera).
+## Visual Studio Code support
+
+For a better developer experience, you probably want your editor to lint and fix for you.
+1. Install the [ESLint package](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+2. Now we need to setup some VS Code settings via `Code/File` → `Preferences` → `Settings`. It's easier to enter these settings while editing the `settings.json` file, so click the Open (Open Settings) icon in the top right corner:
+  ```js
+  "editor.formatOnSave": false,
+  "eslint.alwaysShowStatus": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
+  ```
+  
+After attempting to lint your file for the first time, you may need to click on 'ESLint' in the bottom right and select 'Allow Everywhere' in the alert window. 
+Finally you'll usually need to restart VS code.
