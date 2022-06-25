@@ -31,7 +31,7 @@ These are settings for ESLint used for my personal projects.
 ```js
 {
   "extends": [
-    "@marsi/eslint-config-marsi"
+    "marsi"
   ],
 }
 ```

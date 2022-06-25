@@ -1,6 +1,6 @@
 {
-  "name": "@marsi/eslint-config-marsi",
-  "version": "1.0.0",
+  "name": "eslint-config-marsi",
+  "version": "1.0.1",
   "description": "ESLint configuration from Luis Marsiglia",
   "main": "index.js",
   "author": "Luis Marsiglia <marsiglia.business@gmail.com>",
@@ -9,29 +9,18 @@
     "url": "git+https://github.com/marsidev/eslint-config-marsi.git"
   },
   "license": "ISC",
-  "devDpendencies": {
-    "@typescript-eslint/eslint-plugin": "^5.29.0",
-    "@typescript-eslint/parser": "^5.29.0",
-    "eslint": "^8.18.0",
-    "eslint-config-xo": "^0.41.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-react": "^7.30.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-unused-imports": "^2.0.0"
-  },
-  "peerDpendencies": {
-    "@typescript-eslint/eslint-plugin": "^5.29.0",
-    "@typescript-eslint/parser": "^5.29.0",
-    "eslint": "^8.18.0",
-    "eslint-config-xo": "^0.41.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-react": "^7.30.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-unused-imports": "^2.0.0"
-  },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "eslint-config-xo": "^0.41.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-unused-imports": "^2.0.0"
+  },
+  "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "eslint": "^8.18.0",
@@ -50,8 +39,5 @@
   "bugs": {
     "url": "https://github.com/marsidev/eslint-config-marsi/issues"
   },
-  "homepage": "https://github.com/marsidev/eslint-config-marsi#readme",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "homepage": "https://github.com/marsidev/eslint-config-marsi#readme"
 }
