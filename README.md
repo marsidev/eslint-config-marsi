@@ -8,19 +8,19 @@ These are settings for ESLint used for my personal projects.
 
 1. Install the config and dependencies:
 
-  - Using npm
+  - Using [npm](https://www.npmjs.com)
     ```bash
     npm i eslint-config-marsi --save-dev
     npx install-peerdeps eslint-config-marsi --dev
     ```
 
-  - Using yarn
+  - Using [yarn](https://yarnpkg.com)
     ```bash
-    yarn add eslint-config-marsi --dev
+    yarn add eslint-config-marsi -D
     npx install-peerdeps eslint-config-marsi --yarn --dev
     ```
 
-  - Using pnpm
+  - Using [pnpm](https://pnpm.io)
     ```bash
     pnpm add eslint-config-marsi -D
     npx install-peerdeps eslint-config-marsi --pnpm --dev
@@ -32,7 +32,7 @@ These are settings for ESLint used for my personal projects.
 {
   "extends": [
     "marsi"
-  ],
+  ]
 }
 ```
 
