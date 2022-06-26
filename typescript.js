@@ -36,8 +36,6 @@ module.exports = {
     '@typescript-eslint/no-redeclare': ['warn', {
       ignoreDeclarationMerge: true
     }],
-    '@typescript-eslint/type-annotation-spacing': ['error'],
-    'no-unused-vars': 0,
-    'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }]
+    '@typescript-eslint/type-annotation-spacing': ['error']
   }
 }

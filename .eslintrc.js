@@ -46,7 +46,6 @@ module.exports = {
     'spaced-comment': 'warn',
     'jsx-quotes': ['error', 'prefer-single'],
     'react/function-component-definition': 0,
-    'react/jsx-filename-extension': [1, { extensions: ['.jsx'] }],
     'react/jsx-indent': [2, 2],
     'react/jsx-sort-props': ['warn', {
       callbacksLast: true,
