@@ -51,13 +51,21 @@ These is a shareable config for ESLint, used on my personal JavaScript/TypeScrip
        }
        ```
 
-       *Note*: If your `tsconfig.json` is not in the same directory as `package.json`, you will have to set the path yourself:
+       *Note*: If your `tsconfig.json` is not in the same directory as `package.json`, you will have to set the path yourself in `parserOptions` and `settings`:
 
-       ```json
+       ```jsonc
+       // .eslintrc.json
        {
         "extends": ["marsi/typescript"],
         "parserOptions": {
-          "project": "some-path/tsconfig.json"
+          "project": "path/to/project/tsconfig.json" // <- path including tsconfig.json
+        },
+        "settings": {
+          "import/resolver": {
+            "typescript": {
+              "project": ["path/to/project"] // <- folder path only
+            }
+          }
         }
        }
        ```
