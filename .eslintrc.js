@@ -1,17 +1,16 @@
 module.exports = {
-  extends: [
-    'xo',
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:import/errors',
-    'plugin:import/recommended'
-  ],
   env: {
     browser: true,
-    es6: true,
+    es2021: true,
     node: true
   },
-  plugins: ['import', 'unused-imports', 'react', 'react-hooks'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:import/recommended',
+    'standard'
+  ],
+  plugins: ['react', 'import'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -39,6 +38,7 @@ module.exports = {
     'object-curly-newline': ['error', { multiline: true, consistent: true }],
     'object-curly-spacing': ['error', 'always'],
     'operator-linebreak': 'off',
+    'padding-line-between-statements': 'off',
     quotes: ['error', 'single'],
     radix: 'off',
     semi: ['error', 'never'],
@@ -47,56 +47,70 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-single'],
     'react/function-component-definition': 0,
     'react/jsx-indent': [2, 2],
-    'react/jsx-sort-props': ['warn', {
-      callbacksLast: true,
-      shorthandFirst: true,
-      noSortAlphabetically: false,
-      reservedFirst: true
-    }],
+    'react/jsx-sort-props': [
+      'warn',
+      {
+        callbacksLast: true,
+        shorthandFirst: true,
+        noSortAlphabetically: false,
+        reservedFirst: true
+      }
+    ],
     'react/jsx-tag-spacing': 'off',
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
     'react/no-children-prop': 'off',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
-    'react/sort-prop-types': ['warn', {
-      callbacksLast: true,
-      ignoreCase: true,
-      requiredFirst: false,
-      sortShapeProp: true,
-      noSortAlphabetically: false
-    }],
-    'sort-imports': ['error', {
-      ignoreCase: true,
-      ignoreDeclarationSort: false,
-      ignoreMemberSort: false,
-      memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
-      allowSeparatedGroups: false
-    }],
-    'import/order': ['warn', {
-      groups: [
-        'type',
-        'builtin',
-        'object',
-        'external',
-        'internal',
-        'parent',
-        'sibling',
-        'index'
-      ],
-      pathGroups: [{
-        pattern: '~/**',
-        group: 'external',
-        position: 'after'
-      }],
-      'newlines-between': 'never'
-    }],
-    'react/self-closing-comp': 'warn',
-    'padding-line-between-statements': ['warn', {
-      blankLine: 'always', prev: '*', next: ['return', 'export']
-    }]
+    'react/sort-prop-types': [
+      'warn',
+      {
+        callbacksLast: true,
+        ignoreCase: true,
+        requiredFirst: false,
+        sortShapeProp: true,
+        noSortAlphabetically: false
+      }
+    ],
+    'import/order': [
+      'warn',
+      {
+        groups: [
+          'type',
+          'builtin',
+          'object',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index'
+        ],
+        pathGroups: [
+          {
+            pattern: '~/**',
+            group: 'external',
+            position: 'after'
+          }
+        ],
+        'newlines-between': 'never'
+      }
+    ],
+    'react/self-closing-comp': 'warn'
   },
   settings: {
     react: {
       version: 'detect'
     }
-  }
+  },
+  ignorePatterns: [
+    'node_modules',
+    'dist',
+    'build',
+    'public',
+    '.next',
+    '.vercel',
+    '.caache',
+    '.eslintrc*',
+    '*.config.js'
+  ]
 }

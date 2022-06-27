@@ -12,7 +12,7 @@ These is a shareable config for ESLint, used on my personal JavaScript/TypeScrip
 ## What it does
 
 - Lints JavaScript and TypeScript files
-- Uses [eslint-config-xo](https://github.com/xojs/eslint-config-xo) as a base config
+- Uses [eslint-config-standard](https://github.com/standard/eslint-config-standard) as a base config
 
 ## Installing
 
@@ -51,12 +51,24 @@ These is a shareable config for ESLint, used on my personal JavaScript/TypeScrip
        }
        ```
 
+       *Note*: If your `tsconfig.json` is not in the same directory as `package.json`, you will have to set the path yourself:
+
+       ```json
+       {
+        "extends": ["marsi/typescript"],
+        "parserOptions": {
+          "project": "some-path/tsconfig.json"
+        }
+       }
+       ```
+
     If you won't use TypeScript, you can remove TypeScript-related packages from your `package.json`:
 
     ```diff
     "devDependencies": {
     - "@typescript-eslint/eslint-plugin": "x.x.x",
     - "@typescript-eslint/parser": "x.x.x",
+    - "eslint-import-resolver-typescript": "x.x.x",
     - "typescript": "x.x.x"
     },
     ```
