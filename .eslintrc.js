@@ -7,7 +7,6 @@ module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:react/recommended',
-		'plugin:import/recommended',
 		'standard'
 	],
 	plugins: ['react', 'import'],
@@ -123,7 +122,7 @@ module.exports = {
 		'public',
 		'.next',
 		'.vercel',
-		'.caache',
+		'.cache',
 		'.eslintrc*',
 		'*.config.js'
 	]
