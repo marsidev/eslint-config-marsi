@@ -25,52 +25,6 @@ module.exports = {
 		'comma-dangle': ['warn', 'never'],
 		curly: ['error', 'multi-line'],
 		'guard-for-in': 'off',
-		indent: ['error', 2],
-		'no-mixed-spaces-and-tabs': 'off',
-		'no-console': 'off',
-		'no-debugger': 'warn',
-		'no-negated-condition': 'off',
-		'no-extend-native': 'off',
-		'no-return-assign': 'off',
-		'no-trailing-spaces': 'warn',
-		'no-unused-vars': 'warn',
-		'no-use-before-define': 'off',
-		'object-curly-newline': ['error', { multiline: true, consistent: true }],
-		'object-curly-spacing': ['error', 'always'],
-		'operator-linebreak': 'off',
-		'padding-line-between-statements': 'off',
-		quotes: ['error', 'single'],
-		radix: 'off',
-		semi: ['error', 'never'],
-		'space-before-function-paren': 'off',
-		'spaced-comment': 'warn',
-		'jsx-quotes': ['error', 'prefer-single'],
-		'react/function-component-definition': 0,
-		'react/jsx-sort-props': [
-			'warn',
-			{
-				callbacksLast: true,
-				shorthandFirst: true,
-				noSortAlphabetically: false,
-				reservedFirst: true
-			}
-		],
-		'react/jsx-tag-spacing': 'off',
-		'react/jsx-uses-react': 'error',
-		'react/jsx-uses-vars': 'error',
-		'react/no-children-prop': 'off',
-		'react/prop-types': 'off',
-		'react/react-in-jsx-scope': 'off',
-		'react/sort-prop-types': [
-			'warn',
-			{
-				callbacksLast: true,
-				ignoreCase: true,
-				requiredFirst: false,
-				sortShapeProp: true,
-				noSortAlphabetically: false
-			}
-		],
 		'import/order': [
 			'warn',
 			{
@@ -84,22 +38,78 @@ module.exports = {
 					'sibling',
 					'index'
 				],
+				'newlines-between': 'never',
 				pathGroups: [
 					{
-						pattern: '~/**',
 						group: 'external',
+						pattern: '~/**',
 						position: 'after'
 					}
-				],
-				'newlines-between': 'never'
+				]
 			}
 		],
-		'react/self-closing-comp': 'warn',
-		'sort-imports': ['warn', { ignoreDeclarationSort: true }],
+		indent: ['warn', 'tab'],
+		'jsx-quotes': ['error', 'prefer-single'],
+		'no-console': 'off',
 		'no-constant-binary-expression': 'warn',
-		indent: ['error', 'tab'],
+		'no-debugger': 'warn',
+		'no-extend-native': 'off',
+		'no-mixed-spaces-and-tabs': 'off',
+		'no-negated-condition': 'off',
+		'no-return-assign': 'off',
 		'no-tabs': 'off',
-		'react/jsx-indent': ['error', 'tab']
+		'no-trailing-spaces': 'warn',
+		'no-unused-vars': 'warn',
+		'no-use-before-define': 'off',
+		'object-curly-newline': [
+			'error',
+			{
+				consistent: true,
+				multiline: true
+			}
+		],
+		'object-curly-spacing': ['error', 'always'],
+		'operator-linebreak': 'off',
+		'padding-line-between-statements': 'off',
+		quotes: ['error', 'single'],
+		radix: 'off',
+		'react/function-component-definition': 0,
+		'react/jsx-indent': ['warn', 'tab'],
+		'react/jsx-sort-props': [
+			'warn',
+			{
+				callbacksLast: true,
+				noSortAlphabetically: false,
+				reservedFirst: true,
+				shorthandFirst: true
+			}
+		],
+		'react/jsx-tag-spacing': 'off',
+		'react/jsx-uses-react': 'error',
+		'react/jsx-uses-vars': 'error',
+		'react/no-children-prop': 'off',
+		'react/prop-types': 'off',
+		'react/react-in-jsx-scope': 'off',
+		'react/self-closing-comp': 'warn',
+		'react/sort-prop-types': [
+			'warn',
+			{
+				callbacksLast: true,
+				ignoreCase: true,
+				noSortAlphabetically: false,
+				requiredFirst: false,
+				sortShapeProp: true
+			}
+		],
+		semi: ['error', 'never'],
+		'sort-imports': [
+			'warn',
+			{
+				ignoreDeclarationSort: true
+			}
+		],
+		'space-before-function-paren': 'off',
+		'spaced-comment': 'warn'
 	},
 	settings: {
 		react: {

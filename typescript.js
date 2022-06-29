@@ -10,16 +10,6 @@ module.exports = {
 		project: './tsconfig.json'
 	},
 	rules: {
-		'@typescript-eslint/no-unused-vars': [
-			'warn',
-			{
-				args: 'after-used',
-				ignoreRestSiblings: false,
-				argsIgnorePattern: '^_.*?$'
-			}
-		],
-		'@typescript-eslint/semi': ['error', 'never'],
-		'@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
 		'@typescript-eslint/consistent-type-assertions': [
 			'error',
 			{
@@ -27,6 +17,7 @@ module.exports = {
 				objectLiteralTypeAssertions: 'never'
 			}
 		],
+		'@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
 		'@typescript-eslint/member-delimiter-style': [
 			'error',
 			{
@@ -34,11 +25,11 @@ module.exports = {
 					delimiter: 'none',
 					requireLast: true
 				},
+				multilineDetection: 'brackets',
 				singleline: {
 					delimiter: 'comma',
 					requireLast: false
-				},
-				multilineDetection: 'brackets'
+				}
 			}
 		],
 		'@typescript-eslint/method-signature-style': ['error', 'property'],
@@ -50,6 +41,15 @@ module.exports = {
 				ignoreDeclarationMerge: true
 			}
 		],
+		'@typescript-eslint/no-unused-vars': [
+			'warn',
+			{
+				args: 'after-used',
+				argsIgnorePattern: '^_.*?$',
+				ignoreRestSiblings: false
+			}
+		],
+		'@typescript-eslint/semi': ['error', 'never'],
 		'@typescript-eslint/type-annotation-spacing': ['error'],
 		'import/no-unresolved': 'error'
 	},
