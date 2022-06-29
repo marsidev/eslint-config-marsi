@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-marsi",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Shareable ESLint configuration from Luis Marsiglia",
   "main": "index.js",
   "author": "Luis Marsiglia <marsiglia.business@gmail.com>",
