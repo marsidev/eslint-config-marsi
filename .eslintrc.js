@@ -4,21 +4,29 @@ module.exports = {
 		es2021: true,
 		node: true
 	},
-	extends: [
-		'eslint:recommended',
-		'plugin:react/recommended',
-		'standard'
+	extends: ['eslint:recommended', 'plugin:react/recommended', 'standard'],
+	ignorePatterns: [
+		'node_modules',
+		'dist',
+		'build',
+		'public',
+		'.next',
+		'.vercel',
+		'.cache',
+		'.eslintrc*',
+		'*.config.js'
 	],
-	plugins: ['react', 'import'],
 	parserOptions: {
-		ecmaVersion: 'latest',
-		sourceType: 'module',
 		ecmaFeatures: {
 			jsx: true
-		}
+		},
+		ecmaVersion: 'latest',
+		sourceType: 'module'
 	},
+	plugins: ['react', 'import'],
 	rules: {
 		'arrow-body-style': 'off',
+		'arrow-parens': ['warn', 'as-needed'],
 		camelcase: 'off',
 		'capitalized-comments': 'off',
 		'comma-dangle': ['warn', 'never'],
@@ -58,7 +66,16 @@ module.exports = {
 		'no-return-assign': 'off',
 		'no-tabs': 'off',
 		'no-trailing-spaces': 'warn',
-		'no-unused-vars': 'warn',
+		'no-unused-vars': [
+			'warn',
+			{
+				args: 'all',
+				argsIgnorePattern: '^_',
+				caughtErrorsIgnorePattern: '^_',
+				ignoreRestSiblings: true,
+				varsIgnorePattern: '^_'
+			}
+		],
 		'no-use-before-define': 'off',
 		'object-curly-newline': [
 			'error',
@@ -70,6 +87,19 @@ module.exports = {
 		'object-curly-spacing': ['error', 'always'],
 		'operator-linebreak': 'off',
 		'padding-line-between-statements': 'off',
+		'prefer-destructuring': [
+			'warn',
+			{
+				AssignmentExpression: {
+					array: false,
+					object: false
+				},
+				VariableDeclarator: {
+					array: false,
+					object: true
+				}
+			}
+		],
 		quotes: ['error', 'single'],
 		radix: 'off',
 		'react/function-component-definition': 0,
@@ -114,16 +144,5 @@ module.exports = {
 		react: {
 			version: 'detect'
 		}
-	},
-	ignorePatterns: [
-		'node_modules',
-		'dist',
-		'build',
-		'public',
-		'.next',
-		'.vercel',
-		'.cache',
-		'.eslintrc*',
-		'*.config.js'
-	]
+	}
 }
