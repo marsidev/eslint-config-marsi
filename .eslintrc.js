@@ -32,6 +32,8 @@ module.exports = {
 		'comma-dangle': ['warn', 'never'],
 		curly: ['error', 'multi-line'],
 		'guard-for-in': 'off',
+		'import/export': 'off',
+		'import/no-anonymous-default-export': 'off',
 		'import/order': [
 			'warn',
 			{
@@ -72,7 +74,7 @@ module.exports = {
 				args: 'all',
 				argsIgnorePattern: '^_',
 				caughtErrorsIgnorePattern: '^_',
-				ignoreRestSiblings: true,
+				ignoreRestSiblings: false,
 				varsIgnorePattern: '^_'
 			}
 		],
