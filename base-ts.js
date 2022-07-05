@@ -10,6 +10,7 @@ module.exports = {
 		project: './tsconfig.json'
 	},
 	rules: {
+		'@typescript-eslint/comma-dangle': ['warn', 'never'],
 		'@typescript-eslint/consistent-type-assertions': [
 			'error',
 			{
@@ -18,6 +19,7 @@ module.exports = {
 			}
 		],
 		'@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+		'@typescript-eslint/indent': ['warn', 'tab'],
 		'@typescript-eslint/member-delimiter-style': [
 			'error',
 			{
@@ -44,14 +46,24 @@ module.exports = {
 		'@typescript-eslint/no-unused-vars': [
 			'warn',
 			{
-				args: 'after-used',
+				args: 'all',
 				argsIgnorePattern: '^_.*?$',
-				ignoreRestSiblings: false
+				caughtErrorsIgnorePattern: '^_',
+				ignoreRestSiblings: false,
+				varsIgnorePattern: '^_'
 			}
 		],
-		'@typescript-eslint/semi': ['error', 'never'],
+		'@typescript-eslint/padding-line-between-statements': 'off',
+		'@typescript-eslint/semi': ['warn', 'never'],
+		'@typescript-eslint/space-before-function-paren': 'off',
+		'@typescript-eslint/quotes': ['warn', 'single'],
 		'@typescript-eslint/type-annotation-spacing': ['error'],
-		'import/no-unresolved': 'error'
+		'comma-dangle': 'off',
+		'import/no-unresolved': 'error',
+		indent: 'off',
+		'no-unused-vars': 'off',
+		semi: 'off',
+		quotes: 'off'
 	},
 	settings: {
 		'import/parsers': {
