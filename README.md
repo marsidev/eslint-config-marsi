@@ -37,26 +37,40 @@ These is a shareable config for ESLint, used on my personal JavaScript/TypeScrip
 
 3. Fill your `.eslintrc.json` file:
   
-     - Using JavaScript:
+     - For JavaScript projects:
        ```json
        {
          "extends": ["marsi"]
        }
        ```
 
-     - Using TypeScript:
+     - For TypeScript projects:
        ```json
        {
-         "extends": ["marsi/typescript"]
+         "extends": ["marsi/ts"]
        }
        ```
 
-       *Note*: If your `tsconfig.json` is not in the same directory as `package.json`, you will have to set the path yourself in `parserOptions` and `settings`:
+     - For JavaScript React (`.jsx`) projects:
+       ```json
+       {
+         "extends": ["marsi/react"]
+       }
+       ```
+
+     - For TypeScript React (`.tsx`) projects:
+       ```json
+       {
+         "extends": ["marsi/react-ts"]
+       }
+       ```
+
+       *Note*: If you use TypeScript and your `tsconfig.json` is not in the same directory as `package.json`, you will have to set the path yourself in `parserOptions` and `settings`:
 
        ```jsonc
        // .eslintrc.json
        {
-        "extends": ["marsi/typescript"],
+        "extends": ["marsi/ts"], // or "marsi/react-ts"
         "parserOptions": {
           "project": "path/to/project/tsconfig.json" // <- path including tsconfig.json
         },
@@ -81,19 +95,51 @@ These is a shareable config for ESLint, used on my personal JavaScript/TypeScrip
     },
     ```
 
+    If you won't use React, you can remove React-related packages from your `package.json`:
+
+    ```diff
+    "devDependencies": {
+    - "eslint-plugin-react": "x.x.x"
+    },
+    ```
+
 ## Scripts
 
-You can add these two scripts to your package.json to lint and/or fix your code:
-```json
-"scripts": {
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix",
-},
-```
+- For JavaScript projects:
+  ```json
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+  },
+  ```
+
+- For TypeScript projects:
+  ```json
+  "scripts": {
+    "lint": "eslint --ext .ts .",
+		"lint:fix": "eslint --ext .ts . --fix",
+  },
+  ```
+
+- For JavaScript React (`.jsx`) projects:
+  ```json
+  "scripts": {
+    "lint": "eslint --ext .js --ext .jsx .",
+		"lint:fix": "eslint --ext .js --ext .jsx . --fix",
+  },
+  ```
+
+- For TypeScript React (`.tsx`) projects:
+  ```json
+  "scripts": {
+    "lint": "eslint --ext .ts --ext .tsx .",
+		"lint:fix": "eslint --ext .ts --ext .tsx . --fix",
+  },
+  ```
 
 ## Settings
 
-If you'd like to overwrite eslint settings, you can add the rules in your `.eslintrc` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"`:
+If you'd like to overwrite eslint settings, you can add the rules in your `.eslintrc.json` file. The [ESLint rules](https://eslint.org/docs/rules/) go directly under `"rules"`:
 
 ```json
 {
