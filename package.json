@@ -23,16 +23,16 @@
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.4.0 || ^6.0.0",
-    "@typescript-eslint/parser": "^5.4.0 || ^6.0.0",
-    "eslint": "^8.18.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-import-resolver-typescript": "^3.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.27.0",
-    "typescript": "^4.7.4 || ^5.0.0"
+    "@typescript-eslint/eslint-plugin": ">=5.4.0 || >=6.0.0",
+    "@typescript-eslint/parser": ">=5.4.0 || >=6.0.0",
+    "eslint": ">=7.4.0",
+    "eslint-config-standard": ">=17.0.0",
+    "eslint-import-resolver-typescript": ">=3.0.0",
+    "eslint-plugin-import": ">=2.26.0",
+    "eslint-plugin-n": ">=15.0.0",
+    "eslint-plugin-promise": ">=6.0.0",
+    "eslint-plugin-react": ">=7.27.0",
+    "typescript": ">=4.7.4 || >=5.0.0"
   },
   "keywords": [
     "eslint",
@@ -43,8 +43,6 @@
   },
   "homepage": "https://github.com/marsidev/eslint-config-marsi#readme",
   "scripts": {
-    "build": "unbuild",
-    "prepublishOnly": "pnpm run build",
-    "release": "bumpp && npm publish"
+    "release": "bumpp && pnpm publish"
   }
 }
