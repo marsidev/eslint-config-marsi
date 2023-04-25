@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-marsi",
   "version": "1.1.1",
-  "description": "Shareable ESLint configuration from Luis Marsiglia",
+  "description": "Shareable ESLint configuration by Luis Marsiglia <marsidev>",
   "main": "index.js",
   "author": "Luis Marsiglia <marsiglia.business@gmail.com>",
   "repository": {
@@ -10,36 +10,41 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5",
-    "@typescript-eslint/parser": "^5",
-    "eslint": "^8",
-    "eslint-config-standard": "^17",
-    "eslint-import-resolver-typescript": "^3",
-    "eslint-plugin-import": "^2",
-    "eslint-plugin-n": "^15",
-    "eslint-plugin-promise": "^6",
-    "eslint-plugin-react": "^7",
-    "typescript": "^4.7.4"
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.39.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5",
-    "@typescript-eslint/parser": "^5",
-    "eslint": "^8",
-    "eslint-config-standard": "^17",
-    "eslint-import-resolver-typescript": "^3",
-    "eslint-plugin-import": "^2",
-    "eslint-plugin-n": "^15",
-    "eslint-plugin-promise": "^6",
-    "eslint-plugin-react": "^7",
-    "typescript": "^4.7.4"
+    "@typescript-eslint/eslint-plugin": "^5.4.0 || ^6.0.0",
+    "@typescript-eslint/parser": "^5.4.0 || ^6.0.0",
+    "eslint": "^8.18.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-import-resolver-typescript": "^3.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.27.0",
+    "typescript": "^4.7.4 || ^5.0.0"
   },
   "keywords": [
     "eslint",
-    "lint",
     "config"
   ],
   "bugs": {
     "url": "https://github.com/marsidev/eslint-config-marsi/issues"
   },
-  "homepage": "https://github.com/marsidev/eslint-config-marsi#readme"
+  "homepage": "https://github.com/marsidev/eslint-config-marsi#readme",
+  "scripts": {
+    "build": "unbuild",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp && npm publish"
+  }
 }
