@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://npmjs.com/package/eslint-config-marsi"><img src="https://img.shields.io/npm/v/eslint-config-marsi.svg" alt="npm package" /></a>
   <a href="https://npmjs.com/package/eslint-config-marsi"><img src="https://img.shields.io/npm/dm/eslint-config-marsi.svg" alt="npm downloads" /></a>
-  <a href="https://twitter.com/marsigliacr/"><img src="https://img.shields.io/twitter/follow/marsigliacr?label=Follow%20on%20Twitter" /></a>
+  <a href="https://twitter.com/marsidev/"><img src="https://img.shields.io/twitter/follow/marsidev?label=Follow%20on%20Twitter" /></a>
 </p>
 <br/>
 
